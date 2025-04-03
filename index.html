@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- Ensure script loads after HTML -->
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="search_Box">
+            <input type="text" id="city_Input" placeholder="Search For Any City....">
+            <button onclick="getWeather()">Search</button>
+        </div>
+        <div class="error" id="error" style="display:none; "></div>
+        <div class="loading" id="loading" style="display:none;">Fetching The Data....</div>
+
+        <div class="weather-Info" id="weather-Info" style="display:none;">
+            <div class="current_Weather">
+                <div>
+                    <h1 class="city_name" id="city_Name">City Name</h1>
+                    <p class="date" id="date">Date</p>
+                    <p class="weather_Description" id="weather_Description">Weather Description</p>
+                </div>
+                <div>
+                    <span class="temperature" id="temperature">0ºC</span>
+                    <img src="/api/placeholder/120/120" alt="Weather icon" id="weather_Icon">
+                </div>
+            </div>
+
+            <div class="weather_Details">
+                <div class="detail_Box">
+                    <h3>Feels like</h3>
+                    <p id="feel_Like">0ºC</p>
+                </div>
+                <div class="detail_Box">
+                    <h3>Humidity</h3>
+                    <p id="humidity">0%</p>
+                </div>
+                <div class="detail_Box">
+                    <h3>Wind Speed</h3>
+                    <p id="wind_Speed">0 Km/hr</p>
+                </div>
+                <div class="detail_Box">
+                    <h3>UV Index</h3>
+                    <p id="uv_Index">0</p>
+                </div>
+            </div>
+
+            <h2 class="section_Title">Forecast</h2>
+            <div class="forecast" id="forecast"></div>
+        </div>
+    </div>
+</body>
+</html>
